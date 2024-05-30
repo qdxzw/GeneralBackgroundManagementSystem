@@ -1,0 +1,2 @@
+# GeneralBackgroundManagementSystem
+基于Vue3全家桶+Express全栈开发的通后台管理系统
