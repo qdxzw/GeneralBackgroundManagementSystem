@@ -5,6 +5,7 @@ const cors = express('cors')
 const loginRouter = require('./router/login')
 const jwtconfig = require('./jwt_config/index')
 const { expressjwt: jwt } = require('express-jwt')
+const Joi = require('joi')
 const port = 3000
 app.use(cors)
 // parse application/x-www-form-urlencodedn
@@ -33,6 +34,9 @@ app.use(
     path: [/^\/api\//]
   })
 )
+app.use((req, res, next) => {
+  if (err instanceof Joi.ValidationError) return res.cc(err)
+})
 app.listen(port, () => {
   console.log(`localhost:${port}`)
 })
