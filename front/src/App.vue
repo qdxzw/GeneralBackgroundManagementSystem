@@ -6,4 +6,9 @@ import { RouterLink, RouterView } from 'vue-router'
   <div id="app"><RouterView /></div>
 </template>
 
-<style scoped></style>
+<style scoped>
+#app {
+  padding: 0px;
+  margin: 0px;
+}
+</style>
